@@ -1,8 +1,19 @@
 #!perl
 
-use threads;
-use threads::shared;
-use Test::More tests => 4;
+use Config;
+BEGIN {
+	if ($Config{useithreads}) {
+		require threads;
+		require Test::More;
+		Test::More->import();
+		plan(tests => 4);
+	}
+	else {
+		require Test::More;
+		Test::More->import();
+		plan(skip_all => 'No use without threads');
+	}
+}
 use Test::Exception;
 use Thread::Const;
 
@@ -18,7 +29,7 @@ my $original_address = address_of $foo;
 
 const $foo;
 
-my $const_address : shared = address_of $foo;
+my $const_address = address_of $foo;
 
 isn::t($const_address, $original_address, 'Address must have changed due to consting');
 
