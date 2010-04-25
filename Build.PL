@@ -15,10 +15,16 @@ my $builder = Module::Build->new(
 		'File::Map'     => 0,
 		'Data::Swap'    => 0,
 		Readonly        => 1.03,
+		Exporter        => 5.57,
 	},
 	add_to_cleanup      => [ 'Thread-Const-*' ],
 	create_makefile_pl  => 'traditional',
 	meta_merge          => {
+		resources      => {
+			bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Thread-Const',
+			repository => 'http://github.com/Leont/thread-const/tree',
+		},
+		keywords       => [ 'mmap', 'threads', 'sharing', 'read-only', 'readonly' ],
 	},
 );
 
