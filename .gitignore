@@ -12,3 +12,5 @@ cover_db
 *.tdy
 *.c
 *.o
+META.yml
+Makefile*
