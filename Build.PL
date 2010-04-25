@@ -26,6 +26,7 @@ my $builder = Module::Build->new(
 		},
 		keywords       => [ 'mmap', 'threads', 'sharing', 'read-only', 'readonly' ],
 	},
+	sign                => 1,
 );
 
 $builder->create_build_script();
