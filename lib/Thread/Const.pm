@@ -4,7 +4,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = 0.001;
+our $VERSION = 0.002;
 
 use bytes;
 use File::Map qw/map_anonymous/;
@@ -46,7 +46,7 @@ Thread::Const - Constant strings efficiently shared between threads
 
 =head1 VERSION
 
-Version 0.001
+Version 0.002
 
 =head1 SYNOPSIS
 
