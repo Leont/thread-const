@@ -1,4 +1,10 @@
 Revision history for Thread-Const
 
+0.003   Removed one argument version of const because of Data::Swap issues
+        Replaced Exporter by Sub::Exporter
+        Replaced Readonly by Const::Fast
+
+0.002   Made unit tests pass on non-threaded perls
+
 0.001   First version, released on an unsuspecting world.
 
