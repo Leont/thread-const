@@ -13,9 +13,7 @@ my $builder = Module::Build->new(
 	requires       => {
 		perl            => 5.008,
 		'File::Map'     => 0,
-		'Data::Swap'    => 0,
-		Readonly        => 1.03,
-		Exporter        => 5.57,
+		'Sub::Exporter' => 0,
 	},
 	add_to_cleanup      => [ 'Thread-Const-*' ],
 	create_makefile_pl  => 'traditional',
